@@ -1,18 +1,27 @@
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: Canada1500, Helvetica, sans-serif;
-  font-size: 2rem;
-  line-height: 3.5rem;
+  font-size: 1.5rem;
+  line-height: 2.3rem;
 }
 
 #main-title {
   text-align: center;
+  margin: 1rem auto 2rem;
 }
 #main-title h1 {
-  font-size: 3rem;
+  text-transform: uppercase;
+  margin: 0px;
+}
+#main-title h3 {
+  margin: 0px;
 }
 
 h2 {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .dark {
@@ -44,7 +53,7 @@ h2 {
 footer {
   font-size: 1rem;
   text-align: right;
-  margin: 0.5rem;
+  padding: 0.5rem 2rem;
 }
 
 ol {

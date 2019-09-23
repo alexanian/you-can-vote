@@ -11,7 +11,7 @@
     <title>You CAN vote in the federal election!</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -19,7 +19,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- Font CSS: we're using the OFFICIAL CANADA FONT, as open sourced by its rad creator: http://typodermicfonts.com/canada1500/ -->
+    <!-- Font CSS: we're using an OFFICIAL CANADA FONT, as open sourced by its rad creator: http://typodermicfonts.com/canada1500/ -->
     <link rel="stylesheet" href="styles/fonts/canada1500.css" type="text/css" charset="utf-8" />
 
     <!-- Main CSS: compiled with SASS -->
@@ -33,25 +33,25 @@
     <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#1abc9c">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
-
-
 </head>
 
   <body>
     <section id="main-title" class="dark">
         <div class="container">
-            <hgroup>
-                <h3>Living outside of Canada?</h3>
-                <h1>you <strong>CAN</strong> vote</h1>
-                <h3>in the federal election!</h3>
-            </hgroup>
+            <div class="row justify-content-center">
+                <hgroup class="col-9">
+                    <h3 class="fit-text">Living outside Canada?</h3>
+                    <h1 class="fit-text">you CAN vote</h1>
+                    <h3 class="fit-text">in the federal election!</h3>
+                </hgroup>
+            </div>
         </div>
     </section>
 
     <section id="but-how" class="light">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-sm-8">
+                <div class="col-8">
                     <h2>How do I vote?</h2>
                     <p>
                         If you are on Canada’s <a href="https://www.elections.ca/content.aspx?section=vot&dir=reg/etr&document=index&lang=e">International Register of Electors</a>,
@@ -81,7 +81,7 @@
             <div class="row">
                 <div class="col-sm-8">
                     <h2>But...</h2>
-                    <div class="row">
+                    <div class="row light">
                         <h3>I’ve been living outside of Canada for years</h3>
                         <p>
                             Good news: if you are a Canadian citizen, you can vote this October.
@@ -99,7 +99,7 @@
                             for being an “absentee voter”.
                         </p>
                     </div>
-                <div class="row">
+                <div class="row light">
                     <h3>It’s Canada, our politics will be chill (read: boring) no matter what</h3>
                     <div>
                         <p>
@@ -115,7 +115,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row light">
                     <h3>One single vote won’t really make a difference</h3>
                     <div>
                         <p>
@@ -212,8 +212,15 @@
 
     <!-- Placed at the end of the document so the pages load faster -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Bootstrap 4 needs Popper, too-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="scripts/fittext/jquery.fittext.js"></script>
+    <script>
+        $("h1.fit-text").fitText();
+        $("h3.fit-text").fitText(1.5);
+    </script>
+</body>
 </html>
