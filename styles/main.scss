@@ -1,0 +1,90 @@
+
+$font-stack: Canada1500, Helvetica, sans-serif;
+
+$palette: (
+    "bg":				    #ffffff,
+    "text-light":           #000000,
+    "text-light-accent":    #760003,
+    "text-dark":            #ffffff,
+    "text-dark-accent":     lighten(#e55555, 15),    
+    "primary":              #ad1f2c,
+    "primary-light":        #e55555,
+    "primary-dark":         #760003, 
+    "green":                #7bedab,		   
+);
+
+
+@function _palette($key) {
+	@return map-get($palette, $key);
+}
+
+body {
+    font-family: $font-stack;
+    font-size: 2rem;
+    line-height: 3.5rem;
+}
+
+#main-title {
+    text-align: center;
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+h2 {
+    margin-bottom: 4rem;
+}
+
+.dark {
+    background-color: _palette("primary");
+    color: _palette("text-dark");
+
+    a {
+        color: _palette("text-dark");
+        border-bottom: 1px _palette("text-dark") dashed;
+    
+        &:hover {
+            color: _palette("text-dark-accent");
+            border-bottom: none;
+        }
+    }
+}
+
+.light {
+    background-color: _palette("bg");
+    color: _palette("text-light");
+
+    a {
+        color: _palette("text-light");
+        border-bottom: 1px _palette("text-light") dashed;
+    
+        &:hover {
+            color: _palette("text-light-accent");
+            border-bottom: none;
+        }
+    }
+}
+
+footer {
+    font-size: 1rem;
+    text-align: right;
+    margin: 0.5rem;
+}
+
+ol {
+    list-style: none;
+    counter-reset: good-ol-counter;
+
+    li {
+        counter-increment: good-ol-counter;
+        position: relative;
+    }
+
+    li::before {
+        content: counter(good-ol-counter)".";
+        font-weight: bold;
+        color: _palette("primary");
+        margin-right: 1rem;
+    }
+}

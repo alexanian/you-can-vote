@@ -1,0 +1,65 @@
+body {
+  font-family: Canada1500, Helvetica, sans-serif;
+  font-size: 2rem;
+  line-height: 3.5rem;
+}
+
+#main-title {
+  text-align: center;
+}
+#main-title h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  margin-bottom: 4rem;
+}
+
+.dark {
+  background-color: #ad1f2c;
+  color: #ffffff;
+}
+.dark a {
+  color: #ffffff;
+  border-bottom: 1px #ffffff dashed;
+}
+.dark a:hover {
+  color: #ef9797;
+  border-bottom: none;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+.light a {
+  color: #000000;
+  border-bottom: 1px #000000 dashed;
+}
+.light a:hover {
+  color: #760003;
+  border-bottom: none;
+}
+
+footer {
+  font-size: 1rem;
+  text-align: right;
+  margin: 0.5rem;
+}
+
+ol {
+  list-style: none;
+  counter-reset: good-ol-counter;
+}
+ol li {
+  counter-increment: good-ol-counter;
+  position: relative;
+}
+ol li::before {
+  content: counter(good-ol-counter) ".";
+  font-weight: bold;
+  color: #ad1f2c;
+  margin-right: 1rem;
+}
+
+/*# sourceMappingURL=main.css.map */
