@@ -3,14 +3,14 @@ $font-stack: Canada1500, Helvetica, sans-serif;
 
 $palette: (
     "bg":				    #ffffff,
-    "text-light":           #000000,
-    "text-light-accent":    #760003,
-    "text-dark":            #ffffff,
-    "text-dark-accent":     lighten(#e55555, 15),    
-    "primary":              #ad1f2c,
-    "primary-light":        #e55555,
-    "primary-dark":         #760003, 
-    "green":                #7bedab,		   
+    "text":                 #000000,
+    "text-accent":          #760003,
+    "text-light":           #ffffff,
+    "text-light-accent":      lighten(#e55555, 15),
+    "red":                  #ad1f2c,
+    "light-red":            #e55555,
+    "dark-red":             #760003,
+    "green":                #7bedab,
 );
 
 
@@ -26,6 +26,19 @@ body {
     font-family: $font-stack;
     font-size: 1.5rem;
     line-height: 2.3rem;
+
+    background-color: _palette("bg");
+    color: _palette("text");
+
+    a {
+        color: _palette("text");
+        border-bottom: 1px _palette("text") dashed;
+
+        &:hover {
+            color: _palette("text-accent");
+            border-bottom: none;
+        }
+    }
 }
 
 #main-title {
@@ -46,29 +59,14 @@ h2 {
     margin-bottom: 2rem;
 }
 
-.dark {
-    background-color: _palette("primary");
-    color: _palette("text-dark");
-
-    a {
-        color: _palette("text-dark");
-        border-bottom: 1px _palette("text-dark") dashed;
-    
-        &:hover {
-            color: _palette("text-dark-accent");
-            border-bottom: none;
-        }
-    }
-}
-
-.light {
-    background-color: _palette("bg");
+.bg-red {
+    background-color: _palette("red");
     color: _palette("text-light");
 
     a {
         color: _palette("text-light");
         border-bottom: 1px _palette("text-light") dashed;
-    
+
         &:hover {
             color: _palette("text-light-accent");
             border-bottom: none;
@@ -94,7 +92,7 @@ ol {
     li::before {
         content: counter(good-ol-counter)".";
         font-weight: bold;
-        color: _palette("primary");
+        color: _palette("red");
         margin-right: 1rem;
     }
 }

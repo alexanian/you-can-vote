@@ -6,6 +6,16 @@ body {
   font-family: Canada1500, Helvetica, sans-serif;
   font-size: 1.5rem;
   line-height: 2.3rem;
+  background-color: #ffffff;
+  color: #000000;
+}
+body a {
+  color: #000000;
+  border-bottom: 1px #000000 dashed;
+}
+body a:hover {
+  color: #760003;
+  border-bottom: none;
 }
 
 #main-title {
@@ -24,29 +34,16 @@ h2 {
   margin-bottom: 2rem;
 }
 
-.dark {
+.bg-red {
   background-color: #ad1f2c;
   color: #ffffff;
 }
-.dark a {
+.bg-red a {
   color: #ffffff;
   border-bottom: 1px #ffffff dashed;
 }
-.dark a:hover {
+.bg-red a:hover {
   color: #ef9797;
-  border-bottom: none;
-}
-
-.light {
-  background-color: #ffffff;
-  color: #000000;
-}
-.light a {
-  color: #000000;
-  border-bottom: 1px #000000 dashed;
-}
-.light a:hover {
-  color: #760003;
   border-bottom: none;
 }
 
