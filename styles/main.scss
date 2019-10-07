@@ -1,5 +1,6 @@
 
-$font-stack: Canada1500, Helvetica, sans-serif;
+$header-font-stack: Canada1500, Helvetica, sans-serif;
+$body-font-stack: Helvetica, Arial, sans-serif;
 
 $palette: (
     "bg":				    #ffffff,
@@ -23,7 +24,7 @@ html {
 }
 
 body {
-    font-family: $font-stack;
+    font-family: $body-font-stack;
     font-size: 1.5rem;
     line-height: 2.3rem;
 
@@ -44,6 +45,7 @@ body {
 #main-title {
     text-align: center;
     margin: 1rem auto 2rem;
+    margin: 1rem auto 2rem;
 
     h1 {
         text-transform: uppercase;
@@ -55,8 +57,22 @@ body {
     }
 }
 
+h1, h2, h3, h4 {
+    font-family: $header-font-stack;
+}
+
 h2 {
     margin-bottom: 2rem;
+
+    .split-header {
+        font-size: 4.5rem;
+    }
+}
+
+div.split {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 3px solid _palette("red");
 }
 
 .bg-red {
