@@ -32,20 +32,52 @@ body {
     color: _palette("text");
 
     a {
-        color: _palette("text");
-        border-bottom: 1px _palette("text") dashed;
+        color: _palette("text-accent");
 
         &:hover {
-            color: _palette("text-accent");
-            border-bottom: none;
+            color: _palette("text");
+            text-decoration: none;
+            border-bottom: 1px _palette("text-accent") dashed;
         }
     }
 }
 
+span.caption {
+    font-size: 90%;
+}
+
+// Headers
+
+h1, h2, h3, h4 {
+    font-family: $header-font-stack;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+h3 {
+    color: _palette("text-accent");
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+div.header {
+    border-bottom: 3px solid _palette("red");
+
+    h2 {
+        font-size: 3rem;
+        background-color: _palette("bg");
+    }
+
+}
+
+
+// Sections and columns
+
 #main-title {
     text-align: center;
-    margin: 1rem auto 2rem;
-    margin: 1rem auto 2rem;
+    margin: 0rem auto 2rem;
 
     h1 {
         text-transform: uppercase;
@@ -57,23 +89,23 @@ body {
     }
 }
 
-h1, h2, h3, h4 {
-    font-family: $header-font-stack;
+.split-content {
+    margin-top: 3rem;
+    padding-top: 1rem;
 }
 
-h2 {
-    margin-bottom: 2rem;
+#objections .split-content {
+    h3:nth-child(n+2) {
+        margin-top: 2rem;
+    }
 
-    .split-header {
-        font-size: 4.5rem;
+    p {
+        margin-left: 2rem;
+        text-align: justify;
     }
 }
 
-div.split {
-    margin-top: 3rem;
-    padding-top: 1rem;
-    border-top: 3px solid _palette("red");
-}
+// Alternative colours
 
 .bg-red {
     background-color: _palette("red");
@@ -94,21 +126,45 @@ footer {
     font-size: 1rem;
     text-align: right;
     padding: 0.5rem 2rem;
+    margin-top: 2rem;
 }
 
+// List
+
 ol {
-    list-style: none;
+    list-style-type: none;
+    display: table;
     counter-reset: good-ol-counter;
 
     li {
+        display: table-row;
         counter-increment: good-ol-counter;
-        position: relative;
     }
 
     li::before {
         content: counter(good-ol-counter)".";
         font-weight: bold;
         color: _palette("red");
-        margin-right: 1rem;
+        display: table-cell;
+        text-align: right;
+        padding-right: 1rem;
+    }
+}
+
+ul {
+    list-style-type: none;
+    display: table;
+
+    li {
+        display: table-row;
+    }
+
+    li::before {
+        content: "\2022";
+        font-weight: bold;
+        color: _palette("red");
+        display: table-cell;
+        text-align: right;
+        padding-right: 1rem;
     }
 }

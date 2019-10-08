@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   overflow-x: hidden;
 }
@@ -10,18 +11,43 @@ body {
   color: #000000;
 }
 body a {
-  color: #000000;
-  border-bottom: 1px #000000 dashed;
+  color: #760003;
 }
 body a:hover {
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px #760003 dashed;
+}
+
+span.caption {
+  font-size: 90%;
+}
+
+h1, h2, h3, h4 {
+  font-family: Canada1500, Helvetica, sans-serif;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+h3 {
   color: #760003;
-  border-bottom: none;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+div.header {
+  border-bottom: 3px solid #ad1f2c;
+}
+div.header h2 {
+  font-size: 3rem;
+  background-color: #ffffff;
 }
 
 #main-title {
   text-align: center;
-  margin: 1rem auto 2rem;
-  margin: 1rem auto 2rem;
+  margin: 0rem auto 2rem;
 }
 #main-title h1 {
   text-transform: uppercase;
@@ -31,21 +57,17 @@ body a:hover {
   margin: 0px;
 }
 
-h1, h2, h3, h4 {
-  font-family: Canada1500, Helvetica, sans-serif;
-}
-
-h2 {
-  margin-bottom: 2rem;
-}
-h2 .split-header {
-  font-size: 4.5rem;
-}
-
-div.split {
+.split-content {
   margin-top: 3rem;
   padding-top: 1rem;
-  border-top: 3px solid #ad1f2c;
+}
+
+#objections .split-content h3:nth-child(n+2) {
+  margin-top: 2rem;
+}
+#objections .split-content p {
+  margin-left: 2rem;
+  text-align: justify;
 }
 
 .bg-red {
@@ -65,21 +87,41 @@ footer {
   font-size: 1rem;
   text-align: right;
   padding: 0.5rem 2rem;
+  margin-top: 2rem;
 }
 
 ol {
-  list-style: none;
+  list-style-type: none;
+  display: table;
   counter-reset: good-ol-counter;
 }
 ol li {
+  display: table-row;
   counter-increment: good-ol-counter;
-  position: relative;
 }
 ol li::before {
   content: counter(good-ol-counter) ".";
   font-weight: bold;
   color: #ad1f2c;
-  margin-right: 1rem;
+  display: table-cell;
+  text-align: right;
+  padding-right: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  display: table;
+}
+ul li {
+  display: table-row;
+}
+ul li::before {
+  content: "•";
+  font-weight: bold;
+  color: #ad1f2c;
+  display: table-cell;
+  text-align: right;
+  padding-right: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */
