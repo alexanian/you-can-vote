@@ -94,6 +94,11 @@ div.header {
     padding-top: 1rem;
 }
 
+section:nth-child(n+2) {
+    margin-top: 2rem;
+}
+
+
 #objections .split-content {
     h3:nth-child(n+2) {
         margin-top: 2rem;
